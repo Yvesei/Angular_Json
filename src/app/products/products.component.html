@@ -1,0 +1,51 @@
+<div class="p-3">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-body" *ngId="productFormGroup">
+                <input type="text" name="" id="" [(ngModel)]="keyword">
+                <button class="btn btn-outline-success m-2" (click)="searchProducts()"><i class="bi bi-search"></i></button>
+            </div>
+            <h3>List Of Products</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> Id</th>
+                        <th> Name</th>
+                        <th> Price</th>
+                        <th> Checked</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td>{{product.id}}</td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                        <td>
+                            <button (click)="handleCheckedProduct(product)" class="btn btn-outline-secondary">
+                                <i [class]="product.checked?'bi bi-check2-circle':'bi bi-circle'"></i>
+                            </button>      
+                        </td>
+                        <td>
+                            <button (click)="handleDelete(product)" class="btn btn-outline-danger">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                        <td>
+                            <button (click)="handleEdit(product)" class="btn btn-outline-primary">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="nav nav-pills">
+                <li *ngFor="let page of [].constructor(this.totalPages); let i=index">
+                  <button (click)="handleGotoPage(i+1)"
+                          [ngClass]="currentPage==(i+1)?'btn-success ':'btn-outline-success'" class="btn m-1">
+                    {{(i+1)}}
+                  </button>
+                </li>
+              </ul> 
+        </div>
+    </div>
+</div>

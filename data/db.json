@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Laptop  ",
+      "price": 255,
+      "checked": true
+    },
+    {
+      "id": "3",
+      "name": "Phone   ",
+      "price": 5000,
+      "checked": true
+    },
+    {
+      "id": "4",
+      "name": "Tablet  ",
+      "price": 1000,
+      "checked": false
+    },
+    {
+      "id": "5",
+      "name": "Watch   ",
+      "price": 500,
+      "checked": false
+    },
+    {
+      "id": "6",
+      "name": "Headphone",
+      "price": 100,
+      "checked": true
+    },
+    {
+      "id": "8",
+      "name": "Camera",
+      "price": 300,
+      "checked": false
+    },
+    {
+      "id": "542c",
+      "name": "elitebook",
+      "price": "3800"
+    },
+    {
+      "name": "imad samadi",
+      "price": -4,
+      "checked": true,
+      "id": "uLGCefS"
+    }
+  ]
+}
